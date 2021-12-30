@@ -175,9 +175,6 @@ class _LoginPageState extends State<LoginPage> {
   }
 }
 
-
-
-
 class instagramBanner extends StatelessWidget {
   const instagramBanner({
     Key? key,
@@ -222,7 +219,7 @@ class _loginButtonState extends State<loginButton> {
         }),
         onTapUp: (detail) => setState(() {
           if(emailController.text == defaultEmail && passwordController.text == defaultPassword){
-            //do something
+            Navigator.pushNamed(context, '/main');
           }
           else{
             showDialog(context: buildContext, builder: (_) => wrongLoginDialog);
