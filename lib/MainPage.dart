@@ -35,10 +35,10 @@ class _MainPageState extends State<MainPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Icon(Icons.home_filled,color: Colors.white,size: 36,),
-              Image.asset("icons/search.png",scale: 18,color: Colors.white,),
-              Image.asset("icons/video.png",scale:18,color: Colors.white,),
-              Image.asset("icons/bag.png",scale:18,color: Colors.white,),
+              Icon(Icons.home_filled,color: Colors.white,size: 30,),
+              Image.asset("icons/search.png",scale: 20,color: Colors.white,),
+              Image.asset("icons/video.png",scale:20,color: Colors.white,),
+              Image.asset("icons/bag.png",scale:20,color: Colors.white,),
               CircleAvatar(backgroundImage: AssetImage("images/aliberk_profile.jpg"),)
 
             ],
@@ -68,7 +68,7 @@ class _MainPageState extends State<MainPage> {
       ),),
       backgroundColor: Colors.black,
       body: ListView(
-        cacheExtent: 20,
+        cacheExtent: 90,
         children: [
           Row(
             children: [

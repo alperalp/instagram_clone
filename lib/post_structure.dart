@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 
+
 class Post extends StatefulWidget {
   Post({required this.image});
   final String image;
-  
-  
+
+
 
   @override
   _PostState createState() => _PostState();
 }
 
 class _PostState extends State<Post> {
-  
+  bool isPostLiked = false;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -45,7 +46,20 @@ class _PostState extends State<Post> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: Image.asset("icons/heart.png",scale: 19,color: Colors.white,),
+                  child: GestureDetector(
+
+                      onTap: (){
+                        setState(() {
+                          if(isPostLiked){
+                            isPostLiked = false;
+                          }
+                          else{
+                            isPostLiked = true;
+                          }
+                        });
+
+                      },
+                      child: Image.asset(isPostLiked ? "icons/heart1.png":"icons/heart.png",scale: 19,color: Colors.white,)),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
