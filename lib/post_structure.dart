@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+
 class Post extends StatefulWidget {
   Post({required this.image});
   final String image;
@@ -34,8 +35,8 @@ class _PostState extends State<Post> {
             ),
           ),
           Container(
-            
-            child: Image.asset(widget.image,)
+            height: 200,
+            child: Image.asset(widget.image) //FadeInImage.assetNetwork(placeholder: 'images/loading.gif', image: widget.image)
             ),
           Padding(
             padding: const EdgeInsets.only(top: 5),
@@ -44,17 +45,17 @@ class _PostState extends State<Post> {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: Image.asset("icons/heart.png",scale: 18,color: Colors.white,),
+                  child: Image.asset("icons/heart.png",scale: 19,color: Colors.white,),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
                   child: Image.asset("icons/chat.png",scale: 16,color: Colors.white,),
                 ),Padding(
                   padding: const EdgeInsets.only(left: 15),
-                  child: Image.asset("icons/send.png",scale: 18,color: Colors.white,),
+                  child: Image.asset("icons/send.png",scale: 19,color: Colors.white,),
                 ),
                 SizedBox(width: 190,),
-                Image.asset("icons/mark.png",scale: 18,color: Colors.white,),
+                Image.asset("icons/mark.png",scale: 19,color: Colors.white,),
 
 
               ],
@@ -73,7 +74,8 @@ class _PostState extends State<Post> {
                 Text(" beğendi",style: TextStyle(color: Colors.white,)),
 
               ],),
-          )
+          ),
+
         ],
         
       ),
