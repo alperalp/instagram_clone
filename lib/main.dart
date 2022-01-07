@@ -7,7 +7,7 @@ import 'package:instagram_clone/MainPage.dart';
 void main() {
   runApp( MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: '/main',
+    initialRoute: '/',
     routes: {
       '/': (context) => const LoginPage(),
       '/main':(context) => const MainPage(),
